@@ -11,6 +11,11 @@ class Student:
         self.time = time
         self.category = category
 
+    # Save as csv
+    def save_as_csv(self):
+        with open(f'./Student/{self.ID}.csv', 'w') as f:
+            f.write(self.__str__())
+
     # toString
     def __str__(self) -> str:
         
