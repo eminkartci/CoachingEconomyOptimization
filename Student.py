@@ -14,8 +14,14 @@ class Student:
     # Save as csv
     def save_as_csv(self):
         with open(f'./Student/{self.ID}.csv', 'w') as f:
-            f.write(self.__str__())
+            f.write(self.to_string_csv())
 
+    # toStringCSV
+    def to_string_csv(self) -> str:
+        csv_content = "ID,Eager,Credible,Payment,Time,Category\n"
+        csv_content += f"{self.ID},{self.eager},{self.credible},{self.payment},{self.time},{self.category}"
+
+        return csv_content
     # toString
     def __str__(self) -> str:
         

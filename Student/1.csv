@@ -1,8 +1,2 @@
-
------ Student 1 -----
-|   Eager [1-10]    : 8
-|   Credible [1-10] : 4
-|   Payment [1-10]  : 500
-|   Time [1-10]     : 10
-|   Category [1-10] : Software
-------------------------------
+ID,Eager,Credible,Payment,Time,Category
+1,8,4,500,10,Software
