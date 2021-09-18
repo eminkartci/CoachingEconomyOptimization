@@ -1,6 +1,20 @@
-
+from array import ArrayType
+from os import stat
+import random
 
 class Student:
+
+    ## STATIC
+    @staticmethod
+    def create_student(student_count) -> ArrayType:
+        # CONSTANT
+        categories = ["Software","Math","Consulting","Music","Sport"]
+        students = []
+        for i in range(student_count):
+            s = Student(i,random.randint(0,11),random.randint(0,11),random.randint(200,700),random.randint(5,15),random.choice(categories))
+            students.append(s)
+
+        return students
 
     # Constructor
     def __init__(self,ID,eager,credible,payment,time,category):
