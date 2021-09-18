@@ -13,3 +13,5 @@ from Student import Student
 students = Student.create_student(10)
 for s in students:
     print(s)
+    
+Student.save_students_csv(students)

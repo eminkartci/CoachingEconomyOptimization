@@ -6,6 +6,13 @@ class Student:
 
     ## STATIC
     @staticmethod
+    def save_students_csv(students):
+        with open('Students.csv', 'w') as f:
+            f.write("ID,Eager,Credible,Payment,Time,Category\n")
+            for s in students:
+                f.write(s.to_string_csv())
+
+    @staticmethod
     def create_student(student_count) -> ArrayType:
         # CONSTANT
         categories = ["Software","Math","Consulting","Music","Sport"]
@@ -28,12 +35,12 @@ class Student:
     # Save as csv
     def save_as_csv(self):
         with open(f'./Student/{self.ID}.csv', 'w') as f:
+            f.write("ID,Eager,Credible,Payment,Time,Category\n")
             f.write(self.to_string_csv())
 
     # toStringCSV
     def to_string_csv(self) -> str:
-        csv_content = "ID,Eager,Credible,Payment,Time,Category\n"
-        csv_content += f"{self.ID},{self.eager},{self.credible},{self.payment},{self.time},{self.category}"
+        csv_content = f"{self.ID},{self.eager},{self.credible},{self.payment},{self.time},{self.category}\n"
 
         return csv_content
     # toString
