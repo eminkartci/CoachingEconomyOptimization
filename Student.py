@@ -10,8 +10,8 @@ class Student:
     def __str__(self) -> str:
         
         content = f"""
-        ----- Student {self.ID} -----
-        |
-        |
-        """
-        return 
+----- Student {self.ID} -----
+|
+|
+"""
+        return content
